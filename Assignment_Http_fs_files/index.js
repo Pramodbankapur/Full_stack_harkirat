@@ -1,15 +1,13 @@
 const express = require("express");
 const fs = require("fs");
 const app = express();
-
-app.get("/fiels/:fileName",function(req ,res){
-    const name =req.params.fileName;
+app.get("/files/:CHAD",function(req,res){
+    const name =req.params.CHAD;
     console.log(name);
-    fs.readFile(name,"utf-8" ,function(err,data){
+    fs.readFile(name ,"UTF-8" ,function(err,data){
         res.json({
             data
         });
     })
 });
-
 app.listen(3002);
